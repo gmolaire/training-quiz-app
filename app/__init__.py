@@ -28,7 +28,7 @@ def create_app():
     if os.getenv("DB_USERNAME") and os.getenv("DB_PASSWORD") and os.getenv("DB_HOST") and os.getenv("DB_PORT") and os.getenv("DB_NAME"):
         db_url = f"postgresql://{os.getenv('DB_USERNAME')}:{os.getenv('DB_PASSWORD')}@{os.getenv('DB_HOST')}:{os.getenv('DB_PORT')}/{os.getenv('DB_NAME')}"
         app.config['SQLALCHEMY_DATABASE_URI'] = db_url
-        app.logger.info(f"Using database URL: {db_url}")
+        app.logger.info(f"Using database URL: postgresql://*******@{os.getenv('DB_HOST')}/{os.getenv('DB_NAME')}")
     elif os.getenv("ANSWER_FILE"):
         app.config['ANSWER_FILE'] = os.getenv("ANSWER_FILE")
         app.logger.info(f"Using answer file: {os.getenv('ANSWER_FILE')}")
