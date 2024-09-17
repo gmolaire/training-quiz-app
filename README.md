@@ -46,11 +46,10 @@ To add more questions, modify the app/quiz.py file by adding more entries to the
 
 The application uses the following environment variables:
 
-- `DATABASE_URL`: The URL for the PostgreSQL database.
+- `DB_USERNAME`: The username for the PostgreSQL database.
+- `DB_PASSWORD`: The password for the PostgreSQL database.
+- `DB_HOST`: The host address for the PostgreSQL database.
+- `DB_PORT`: The port number for the PostgreSQL database.
+- `DB_NAME`: The name of the PostgreSQL database.
 
-i.e.
-```bash
-export DATABASE_URL="postgresql://username:password@localhost:5432/dbname"
-```
-
-**Warning:** When using `DATABASE_URL`, ensure that the specified database exists before running the application. The application will not automatically create the database for you.
+If none of the database environment variables are set, the application will use an in-memory SQLite database.

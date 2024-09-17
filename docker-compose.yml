@@ -8,7 +8,11 @@ services:
     environment:
       - FLASK_APP=app
       - FLASK_ENV=development
-      - ANSWER_FILE=answers.json
+      - DB_USERNAME=user
+      - DB_PASSWORD=password
+      - DB_HOST=localhost
+      - DB_PORT=5432
+      - DB_NAME=quiz
     depends_on:
       - db
     restart: always
