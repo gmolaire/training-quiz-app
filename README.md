@@ -41,3 +41,16 @@ flask run
 ### Adding Questions
 
 To add more questions, modify the app/quiz.py file by adding more entries to the QUESTIONS dictionary.
+
+## Environment Variables
+
+The application uses the following environment variables:
+
+- `DATABASE_URL`: The URL for the PostgreSQL database.
+
+i.e.
+```bash
+export DATABASE_URL="postgresql://username:password@localhost:5432/dbname"
+```
+
+**Warning:** When using `DATABASE_URL`, ensure that the specified database exists before running the application. The application will not automatically create the database for you.
